@@ -1,0 +1,126 @@
+@import "utils";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: $primaryfont;
+}
+
+header {
+    text-align: center;
+    h1 {
+        font-family: $secondaryfont;
+        font-size: 16px;
+    }
+    .location {
+        display: flex;
+        justify-content: center;
+        background-color: #eaeaea;
+        box-shadow: 0px -3px 3px 0px #D1D1D1;
+        gap: 15px;
+        padding: 10px 0px;
+        font-weight: 500;
+        i {
+            color: #303030;
+        }
+    }
+    .explorez {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6f6f6;
+        padding: 40px 50px;
+        .reservez {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .decouvrez {
+            padding: 10px 0 20px 0;
+            font-size: 15px;
+            color: $iconcolor;
+            font-weight: 300;
+        }
+        .btn-rose {
+            background: linear-gradient(175deg, rgba(255, 121, 218, 1) 25%, rgba(164, 92, 220, 1) 75%);
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.53);
+        }
+    }
+}
+
+nav {
+    padding-bottom: 40px;
+    h1 {
+        font-weight: 600;
+        font-size: 22px;
+        padding-left: 20px;
+    }
+    i {
+        color: $iconcolor;
+        margin: 0 25px;
+        font-size: 18px;
+    }
+    .borderone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+        &_element {
+            @include borderone;
+            .chiffre {
+                @include chiffre;
+            }
+        }
+    }
+}
+
+main {
+    padding-bottom: 40px;
+    background-color: #f6f6f6;
+    h1 {
+        font-weight: 600;
+        font-size: 22px;
+        padding-left: 20px;
+        padding-top: 40px;
+    }
+    .restaurants {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_element {
+            @include restaurants_element;
+            .nouveau {
+                @include nouveau;
+            }
+            i {
+                @include heart;
+            }
+        }
+        img {
+            @include restaurants_img;
+        }
+        h3,
+        p {
+            padding-left: 10px;
+        }
+        h3 {
+            padding-bottom: 5px;
+            padding-top: 10px;
+        }
+    }
+}
+
+footer {
+    @include footer
+}

@@ -1,0 +1,95 @@
+$primarycolor: #9356DC;
+$secondarycolor: #FF79DA;
+$tertiarycolor: #99E2D0;
+$iconcolor: #7d7d7d;
+$primaryfont: "Roboto";
+$secondaryfont: "Shrikhand";
+@mixin borderone {
+    background-color: #f5edff;
+    box-shadow: 0px 6px 7px -1px rgba(154, 149, 161, 0.53);
+    height: 70px;
+    border-radius: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@mixin chiffre {
+    background-color: $primarycolor;
+    border-radius: 50%;
+    position: absolute;
+    left: 22px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    line-height: 25px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+@mixin restaurants_img {
+    object-fit: cover;
+    height: 65%;
+    width: 100%;
+}
+
+@mixin restaurants_element {
+    border-radius: 20px;
+    background-color: white;
+    width: 92%;
+    box-shadow: 0px 6px 7px -1px rgba(154, 149, 161, 0.53);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin nouveau {
+    position: absolute;
+    background-color: #99e2d0;
+    color: #0a8d6d;
+    top: 10px;
+    right: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    width: 20%;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+}
+
+@mixin heart {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    font-size: 20px;
+    color: #7d7d7d;
+}
+
+@mixin footer {
+    background-color: #353535;
+    color: white;
+    font-family: $primaryfont;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    p,
+    h3 {
+        padding-left: 20px;
+    }
+    h3 {
+        font-family: $secondaryfont;
+        font-weight: 300;
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+    i {
+        padding-right: 5px;
+    }
+}
