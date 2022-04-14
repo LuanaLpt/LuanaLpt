@@ -5,6 +5,10 @@
     font-family: $primaryfont;
 }
 
+.loader {
+    @include loader
+}
+
 header {
     text-align: center;
     h1 {
@@ -103,7 +107,7 @@ main {
             .nouveau {
                 @include nouveau;
             }
-            i {
+            .heart {
                 @include heart;
             }
         }
