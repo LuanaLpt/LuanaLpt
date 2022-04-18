@@ -137,6 +137,29 @@ $secondaryfont: "Shrikhand";
     }
 }
 
+@mixin heartdeux {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 20px;
+    color: black;
+    .fa-heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .solidheart {
+        transform: scale(0);
+        color: $primarycolor;
+        transition: all 400ms;
+    }
+    &:hover {
+        .solidheart {
+            transform: scale(1);
+        }
+    }
+}
+
 @mixin footer {
     background-color: #353535;
     color: white;
@@ -158,5 +181,41 @@ $secondaryfont: "Shrikhand";
     }
     i {
         padding-right: 5px;
+    }
+}
+
+@mixin btnrose {
+    background: linear-gradient(175deg, rgba(255, 121, 218, 1) 25%, rgba(164, 92, 220, 1) 75%);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.53);
+}
+
+@mixin restaurant {
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    @for $i from 5 through 20 {
+        &:nth-child(#{$i}n) {
+            animation-delay: (0.2s * $i) - 1s;
+        }
+    }
+    @keyframes slidein {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }
