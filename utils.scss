@@ -5,6 +5,8 @@ $iconcolor: #7d7d7d;
 $primaryfont: "Roboto";
 $secondaryfont: "Shrikhand";
 @mixin loader {
+    font-family: $secondaryfont;
+    font-size: 30px;
     top: 0;
     position: fixed;
     width: 100%;
@@ -13,7 +15,7 @@ $secondaryfont: "Shrikhand";
     justify-content: center;
     align-items: center;
     transition: opacity 1s ease-in-out;
-    background: linear-gradient(175deg, rgba(255, 121, 218, 1) 25%, rgba(164, 92, 220, 1) 75%);
+    background: white;
     z-index: 10;
     animation: loaderduration 5s;
     opacity: 0;
@@ -33,26 +35,6 @@ $secondaryfont: "Shrikhand";
         70% {
             left: 1000%;
         }
-    }
-    .dot {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: white;
-        margin: 0 15px;
-        animation: loader infinite 0.5s alternate;
-        transform: translateY(30px);
-    }
-    @keyframes loader {
-        100% {
-            transform: translateY(-30px);
-        }
-    }
-    .dot_deux {
-        animation-delay: 0.05s;
-    }
-    .dot_trois {
-        animation-delay: 0.1s;
     }
 }
 
@@ -127,7 +109,10 @@ $secondaryfont: "Shrikhand";
     }
     .solidheart {
         transform: scale(0);
-        color: $primarycolor;
+        background: linear-gradient(175deg, rgba(255, 121, 218, 1) 25%, rgba(164, 92, 220, 1) 75%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         transition: all 400ms;
     }
     &:hover {
@@ -150,7 +135,10 @@ $secondaryfont: "Shrikhand";
     }
     .solidheart {
         transform: scale(0);
-        color: $primarycolor;
+        background: linear-gradient(175deg, rgba(255, 121, 218, 1) 25%, rgba(164, 92, 220, 1) 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transition: all 400ms;
     }
     &:hover {
@@ -202,6 +190,10 @@ $secondaryfont: "Shrikhand";
     width: 70%;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.53);
     text-decoration: none;
+    &:hover {
+        filter: brightness(1.05);
+        box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.53);
+    }
 }
 
 @mixin restaurant {

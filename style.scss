@@ -2,6 +2,9 @@
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
     font-family: $primaryfont;
 }
 
@@ -99,6 +102,10 @@ main {
             }
             .heart {
                 @include heart;
+            }
+            a {
+                text-decoration: none;
+                color: black;
             }
         }
         img {

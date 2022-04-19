@@ -12,15 +12,22 @@ body {
 header {
     z-index: 1;
     text-align: center;
-    h1 {
-        font-family: $secondaryfont;
-        font-size: 18px;
+    display: flex;
+    .img_logo {
+        height: 25px;
+        margin: 5px auto;
     }
-    img {
+    .img_restaurants {
         width: 100%;
         position: absolute;
-        top: 25px;
+        top: 35px;
         right: 0;
+    }
+    i {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: black;
     }
 }
 

@@ -1,10 +1,15 @@
 * {
   margin: 0px;
   padding: 0px;
+}
+
+body {
   font-family: "Roboto";
 }
 
 .loader {
+  font-family: "Shrikhand";
+  font-size: 30px;
   top: 0;
   position: fixed;
   width: 100%;
@@ -20,7 +25,7 @@
           align-items: center;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  background: linear-gradient(175deg, #ff79da 25%, #a45cdc 75%);
+  background: white;
   z-index: 10;
   -webkit-animation: loaderduration 5s;
           animation: loaderduration 5s;
@@ -60,42 +65,6 @@
   70% {
     left: 1000%;
   }
-}
-
-.loader .dot {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: white;
-  margin: 0 15px;
-  -webkit-animation: loader infinite 0.5s alternate;
-          animation: loader infinite 0.5s alternate;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-}
-
-@-webkit-keyframes loader {
-  100% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-}
-
-@keyframes loader {
-  100% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-}
-
-.loader .dot_deux {
-  -webkit-animation-delay: 0.05s;
-          animation-delay: 0.05s;
-}
-
-.loader .dot_trois {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
 }
 
 header {
@@ -173,6 +142,13 @@ header .explorez .btn-rose {
   -webkit-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.53);
           box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.53);
   text-decoration: none;
+}
+
+header .explorez .btn-rose:hover {
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
+  -webkit-box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.53);
+          box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.53);
 }
 
 nav {
@@ -319,7 +295,10 @@ main .restaurants_element .heart .fa-heart {
 main .restaurants_element .heart .solidheart {
   -webkit-transform: scale(0);
           transform: scale(0);
-  color: #9356DC;
+  background: linear-gradient(175deg, #ff79da 25%, #a45cdc 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-transition: all 400ms;
   transition: all 400ms;
 }
@@ -327,6 +306,11 @@ main .restaurants_element .heart .solidheart {
 main .restaurants_element .heart:hover .solidheart {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+main .restaurants_element a {
+  text-decoration: none;
+  color: black;
 }
 
 main .restaurants img {
