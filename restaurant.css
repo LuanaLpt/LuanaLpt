@@ -80,6 +80,7 @@ main .restaurant .heart .solidheart {
   -webkit-transform: scale(0);
           transform: scale(0);
   background: linear-gradient(175deg, #ff79da 25%, #a45cdc 75%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: all 400ms;

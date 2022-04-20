@@ -8,8 +8,6 @@ body {
 }
 
 .loader {
-  font-family: "Shrikhand";
-  font-size: 30px;
   top: 0;
   position: fixed;
   width: 100%;
@@ -31,6 +29,45 @@ body {
           animation: loaderduration 5s;
   opacity: 0;
   left: 1000%;
+}
+
+.loader .barreblanche {
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(10%, white));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 10%);
+  width: 100%;
+  margin: auto 0;
+  height: 50px;
+  position: absolute;
+  -webkit-animation: barreblanche 4s;
+          animation: barreblanche 4s;
+}
+
+@-webkit-keyframes barreblanche {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 200%;
+  }
+}
+
+@keyframes barreblanche {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 200%;
+  }
+}
+
+.loader .title {
+  background: linear-gradient(175deg, #ff79da 25%, #a45cdc 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Shrikhand";
+  font-size: 30px;
 }
 
 @-webkit-keyframes loaderduration {
