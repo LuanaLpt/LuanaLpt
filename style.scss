@@ -6,6 +6,9 @@
 
 body {
     font-family: $primaryfont;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .loader {
@@ -13,10 +16,12 @@ body {
 }
 
 header {
+    flex-shrink: 0;
     text-align: center;
-    h1 {
-        font-family: $secondaryfont;
-        font-size: 16px;
+    .img_logo {
+        width: 144px;
+        height: 25px;
+        margin: 5px auto;
     }
     .location {
         display: flex;
@@ -53,6 +58,7 @@ header {
 }
 
 nav {
+    flex-shrink: 0;
     padding-bottom: 40px;
     h1 {
         font-weight: 600;
@@ -70,7 +76,6 @@ nav {
         align-items: center;
         justify-content: center;
         gap: 30px;
-        position: relative;
         &_element {
             @include borderone;
             .chiffre {
@@ -82,6 +87,7 @@ nav {
 
 main {
     padding-bottom: 40px;
+    flex-grow: 1;
     background-color: #f6f6f6;
     h1 {
         font-weight: 600;
@@ -123,5 +129,79 @@ main {
 }
 
 footer {
-    @include footer
+    @include footer;
+    flex-shrink: 0;
+}
+
+@media (min-width:992px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .img_logo {
+            margin: 15px calc(50% - 169px) 5px 25px;
+        }
+        .location {
+            width: 136px;
+            margin: 10px 20px 5px calc(50% - 156px);
+        }
+        .location,
+        .explorez {
+            background-color: white;
+            box-shadow: none;
+        }
+    }
+    nav {
+        h1 {
+            padding-left: 25px;
+            padding-bottom: 15px;
+        }
+        .borderone {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            &_element {
+                width: 25%;
+                &:not(:nth-child(3)) {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 30px;
+                        border-bottom: 2px dotted #c7bed1;
+                        top: calc(50% - 1px);
+                        left: calc(100% + 5px)
+                    }
+                }
+            }
+        }
+    }
+    main {
+        background-color: white;
+        h1 {
+            padding-left: 25px;
+        }
+        .restaurants {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px;
+            &_element {
+                width: 330px;
+            }
+        }
+    }
+    footer {
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer_text {
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
 }
