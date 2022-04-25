@@ -42,6 +42,7 @@ $secondaryfont: "Shrikhand";
         -webkit-text-fill-color: transparent;
         font-family: $secondaryfont;
         font-size: 30px;
+        padding: 10px;
     }
     @keyframes loaderduration {
         0% {
@@ -181,6 +182,7 @@ $secondaryfont: "Shrikhand";
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
+    flex-shrink: 0;
     a,
     p,
     h3 {

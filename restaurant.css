@@ -1,6 +1,15 @@
 body {
   background-color: #f6f6f6;
   position: relative;
+  font-family: "Roboto";
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 * {
@@ -22,6 +31,9 @@ header .img_logo {
 }
 
 header .img_restaurants {
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   position: absolute;
   top: 35px;
@@ -39,6 +51,9 @@ main {
   z-index: 7;
   position: relative;
   margin-top: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 main .restaurant {
@@ -361,6 +376,8 @@ footer {
           flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 footer a,
@@ -383,4 +400,47 @@ footer a {
 
 footer i {
   padding-right: 5px;
+}
+
+@media (min-width: 992px) {
+  body main .restaurant .barrebleue {
+    width: 5%;
+  }
+  body main .restaurant .parent_plat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .restaurant .parent_plat .plat {
+    width: calc(33.33% - 22px);
+  }
+  body footer h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body footer .footer_text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
 }

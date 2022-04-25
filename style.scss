@@ -130,7 +130,6 @@ main {
 
 footer {
     @include footer;
-    flex-shrink: 0;
 }
 
 @media (min-width:992px) {

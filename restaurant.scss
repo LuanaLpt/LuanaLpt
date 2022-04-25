@@ -2,6 +2,10 @@
 body {
     background-color: #f6f6f6;
     position: relative;
+    font-family: $primaryfont;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -18,6 +22,8 @@ header {
         margin: 5px auto;
     }
     .img_restaurants {
+        height: 220px;
+        object-fit: cover;
         width: 100%;
         position: absolute;
         top: 35px;
@@ -35,6 +41,7 @@ main {
     z-index: 7;
     position: relative;
     margin-top: 200px;
+    flex-grow: 1;
     .restaurant {
         background-color: #f6f6f6;
         border-radius: 20px;
@@ -147,4 +154,38 @@ main {
 
 footer {
     @include footer
+}
+
+@media (min-width:992px) {
+    body {
+        main {
+            .restaurant {
+                .barrebleue {
+                    width: 5%;
+                }
+                .parent_plat {
+                    display: flex;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    .plat {
+                        width: calc(33.33% - 22px);
+                    }
+                }
+            }
+        }
+        footer {
+            h3 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer_text {
+                flex-direction: row;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    }
 }
