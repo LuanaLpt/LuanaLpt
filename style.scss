@@ -134,26 +134,19 @@ footer {
 
 @media (min-width:992px) {
     header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .img_logo {
-            margin: 15px calc(50% - 169px) 5px 25px;
+        img {
+            padding-bottom: 20px;
+            padding-top: 20px;
         }
-        .location {
-            width: 136px;
-            margin: 10px 20px 5px calc(50% - 156px);
-        }
-        .location,
-        .explorez {
-            background-color: white;
-            box-shadow: none;
+        .explorez .btn-rose {
+            width: 200px;
         }
     }
     nav {
         h1 {
-            padding-left: 25px;
-            padding-bottom: 15px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         .borderone {
             display: flex;
@@ -175,9 +168,9 @@ footer {
         }
     }
     main {
-        background-color: white;
         h1 {
-            padding-left: 25px;
+            text-align: center;
+            padding: 20px 0;
         }
         .restaurants {
             display: flex;
@@ -198,9 +191,11 @@ footer {
         .footer_text {
             flex-direction: row;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 10px;
+        }
+        .border_right {
+            border-right: 1px white solid;
         }
     }
 }

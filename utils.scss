@@ -222,24 +222,18 @@ $secondaryfont: "Shrikhand";
     }
 }
 
-@mixin restaurant {
-    animation-duration: 1s;
-    animation-name: slidein;
-    animation-fill-mode: forwards;
+@mixin plat {
+    animation: 1s slidein .3s forwards;
     opacity: 0;
-    @for $i from 5 through 20 {
-        &:nth-child(#{$i}n) {
-            animation-delay: (0.2s * $i) - 1s;
-        }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
     }
-    @keyframes slidein {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

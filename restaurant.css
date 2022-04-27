@@ -1,3 +1,29 @@
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 body {
   background-color: #f6f6f6;
   position: relative;
@@ -113,20 +139,52 @@ main .restaurant h2 {
   font-size: 15px;
   padding-top: 20px;
   margin: 0;
+  -webkit-animation: 1s slidein .3s forwards;
+          animation: 1s slidein .3s forwards;
+  opacity: 0;
+}
+
+main .restaurant h2:nth-child(6) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+main .restaurant h2:nth-child(9) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
 }
 
 main .restaurant .barrebleue {
   border: 1px solid #95e1ce;
   width: 10%;
+  -webkit-animation: 1s slidein .3s forwards;
+          animation: 1s slidein .3s forwards;
+  opacity: 0;
 }
 
-main .plat {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+main .restaurant .barrebleue:nth-child(7) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+main .restaurant .barrebleue:nth-child(10) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+main .parent_plat:nth-child(8) .plat {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+main .parent_plat:nth-child(11) .plat {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+main .parent_plat .plat {
+  -webkit-animation: 1s slidein .3s forwards;
+          animation: 1s slidein .3s forwards;
   opacity: 0;
   padding-top: 15px;
   padding-left: 10px;
@@ -142,134 +200,28 @@ main .plat {
   overflow: hidden;
 }
 
-main .plat:nth-child(5n) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-main .plat:nth-child(6n) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-main .plat:nth-child(7n) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-main .plat:nth-child(8n) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-main .plat:nth-child(9n) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-main .plat:nth-child(10n) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-main .plat:nth-child(11n) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-main .plat:nth-child(12n) {
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-}
-
-main .plat:nth-child(13n) {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-
-main .plat:nth-child(14n) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-main .plat:nth-child(15n) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-main .plat:nth-child(16n) {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
-}
-
-main .plat:nth-child(17n) {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
-}
-
-main .plat:nth-child(18n) {
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
-}
-
-main .plat:nth-child(19n) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-}
-
-main .plat:nth-child(20n) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-@-webkit-keyframes slidein {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slidein {
-  from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-main .plat:active .check {
+main .parent_plat .plat:hover .check {
   width: 60px;
 }
 
-main .plat:active .check i {
+main .parent_plat .plat:hover .check i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-main .plat:active .price {
+main .parent_plat .plat:hover .price {
   right: 70px;
 }
 
-main .plat:active h3 {
+main .parent_plat .plat:hover h3 {
   padding-right: 105px;
 }
 
-main .plat:active .description {
+main .parent_plat .plat:hover .description {
   padding-right: 105px;
 }
 
-main .plat .check {
+main .parent_plat .plat .check {
   background-color: #99E2D0;
   width: 0;
   position: absolute;
@@ -292,7 +244,7 @@ main .plat .check {
   transition: width .3s;
 }
 
-main .plat .check i {
+main .parent_plat .plat .check i {
   background-color: #99E2D0;
   color: white;
   -webkit-transition: -webkit-transform .3s;
@@ -301,7 +253,7 @@ main .plat .check i {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-main .plat h3 {
+main .parent_plat h3 {
   margin-bottom: 10px;
   padding-right: 45px;
   -webkit-transition: padding-right .3s;
@@ -311,7 +263,7 @@ main .plat h3 {
   overflow: hidden;
 }
 
-main .plat .description {
+main .parent_plat .description {
   text-overflow: ellipsis;
   padding-right: 45px;
   white-space: nowrap;
@@ -320,7 +272,7 @@ main .plat .description {
   transition: padding-right .3s;
 }
 
-main .plat .price {
+main .parent_plat .price {
   position: absolute;
   right: 10px;
   top: 40px;
@@ -417,6 +369,10 @@ footer i {
   body main .restaurant .parent_plat .plat {
     width: calc(33.33% - 22px);
   }
+  body main .commander {
+    width: 200px;
+    margin: 50px auto 50px;
+  }
   body footer h3 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -436,11 +392,12 @@ footer i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     gap: 10px;
+  }
+  body footer .border_right {
+    border-right: 1px white solid;
   }
 }
